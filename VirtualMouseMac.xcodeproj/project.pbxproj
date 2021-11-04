@@ -11,6 +11,7 @@
 		CE18BC042731B508001B20B7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE18BC032731B508001B20B7 /* ViewController.swift */; };
 		CE18BC062731B509001B20B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE18BC052731B509001B20B7 /* Assets.xcassets */; };
 		CE18BC092731B509001B20B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE18BC072731B509001B20B7 /* Main.storyboard */; };
+		CE18BC162731B589001B20B7 /* PeertalkManager in Frameworks */ = {isa = PBXBuildFile; productRef = CE18BC152731B589001B20B7 /* PeertalkManager */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE18BC162731B589001B20B7 /* PeertalkManager in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +79,9 @@
 			dependencies = (
 			);
 			name = VirtualMouseMac;
+			packageProductDependencies = (
+				CE18BC152731B589001B20B7 /* PeertalkManager */,
+			);
 			productName = VirtualMouseMac;
 			productReference = CE18BBFE2731B508001B20B7 /* VirtualMouseMac.app */;
 			productType = "com.apple.product-type.application";
@@ -105,6 +110,9 @@
 				Base,
 			);
 			mainGroup = CE18BBF52731B508001B20B7;
+			packageReferences = (
+				CE18BC142731B589001B20B7 /* XCRemoteSwiftPackageReference "peertalk-simple" */,
+			);
 			productRefGroup = CE18BBFF2731B508001B20B7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -275,7 +283,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 92S6JX27W2;
-				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_HARDENED_RUNTIME = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
@@ -302,7 +310,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 92S6JX27W2;
-				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_HARDENED_RUNTIME = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
@@ -341,6 +349,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CE18BC142731B589001B20B7 /* XCRemoteSwiftPackageReference "peertalk-simple" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kokluch/peertalk-simple";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CE18BC152731B589001B20B7 /* PeertalkManager */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE18BC142731B589001B20B7 /* XCRemoteSwiftPackageReference "peertalk-simple" */;
+			productName = PeertalkManager;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CE18BBF62731B508001B20B7 /* Project object */;
 }
